@@ -1,0 +1,35 @@
+@use "../../scss" as *;
+
+.hero_section_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 3rem 0;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left_side {
+    width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .right_side {
+    width: 50%;
+
+    @include mobile {
+      margin-top: 4rem;
+      width: 100%;
+    }
+
+    img {
+      border-radius: $border-radius;
+    }
+  }
+}

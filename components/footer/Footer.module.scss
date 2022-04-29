@@ -1,0 +1,80 @@
+@use "../../scss" as *;
+
+.footer_container {
+  width: 100%;
+  height: 35vh;
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left_side {
+    width: 30%;
+
+    @include tablet {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .description {
+      margin-top: 1.5rem;
+      width: 90%;
+      color: #ccc;
+      font-size: 1.2rem;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .medias {
+      margin-top: 1.5rem;
+      color: #ccc;
+      font-size: 1.4rem;
+
+      & > * {
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right_side {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include tablet {
+      display: none;
+    }
+
+    .links_container {
+      display: flex;
+
+      & > * {
+        margin: 0 4rem;
+      }
+
+      h2 {
+        color: #d8d8d8;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          cursor: pointer;
+          margin: 1rem 0;
+          color: #adadad;
+        }
+      }
+    }
+  }
+}

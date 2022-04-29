@@ -1,0 +1,84 @@
+@use "../../scss" as *;
+
+.price_plan_box_container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  padding: 2rem 1.5rem;
+  border-radius: $border-radius;
+  position: relative;
+
+  & > * {
+    margin-bottom: 1.5rem;
+  }
+
+  .popular {
+    position: absolute;
+    top: -15px;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    justify-items: center;
+  }
+
+  .name {
+  }
+
+  .price {
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .description {
+    width: 80%;
+    color: #5c5c5c;
+  }
+
+  .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: #5c5c5c;
+    height: 300px;
+
+    .feature_container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      i {
+        color: $primary-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  button {
+    padding: 0.8rem;
+    margin-bottom: 0;
+    border-radius: $border-radius;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+  }
+
+  .get_started_first_button {
+    background-color: $first-button-bg;
+    color: $first-button-color;
+
+    &:hover {
+      background-color: $first-button-bg-hover;
+    }
+  }
+
+  .get_started_second_button {
+    background-color: $second-button-bg;
+    color: $second-button-color;
+
+    &:hover {
+      background-color: $second-button-bg-hover;
+    }
+  }
+}

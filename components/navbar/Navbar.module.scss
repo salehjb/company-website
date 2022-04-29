@@ -1,0 +1,63 @@
+@use "../../scss" as *;
+
+.navbar_container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+
+  .navbar_logo_container {
+    margin-right: 1rem;
+  }
+
+  .navbar_bars_container {
+    display: none;
+    font-size: 1.5rem;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  .nav_items_container {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 1rem;
+
+        a {
+          color: #5c5c5c;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .signup {
+      padding: 0.8rem;
+      margin-left: 2.5rem;
+      border-radius: 5px;
+      background-color: $first-button-bg;
+      color: $first-button-color;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $first-button-bg-hover;
+      }
+    }
+  }
+}

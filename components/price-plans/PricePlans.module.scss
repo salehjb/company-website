@@ -1,0 +1,23 @@
+@use "../../scss" as *;
+
+.price_plans_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+
+  @include mobile {
+    padding: 2rem;
+  }
+
+  .price_plans_boxs_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 1rem 0;
+    }
+  }
+}
